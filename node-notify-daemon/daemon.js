@@ -1,4 +1,4 @@
-var daemon = require('daemonize').setup({
+var daemon = require('daemonize2').setup({
   main: 'notify.js',
   name: 'notify',
   pidfile: 'notify.pid'
@@ -15,6 +15,6 @@ switch (process.argv[2]) {
     break;
 
   default:
-    console.log()
+    console.log('Usage: [start|stop]');
 
 }

@@ -1,9 +1,17 @@
 var fs = require('fs');
 var sys = require('sys');
 var chokidar = require('chokidar');
+var globToRegExp = require('glob-to-regexp');
 
 chokidar.watch('/Users/MacbookRetina', 
   {
+    ignored: function(path) {
+      // console.log('testing path:', path);
+      var re = globToRegExp('/Users/MacbookRetina/Library/Application Support/Sublime Text 3/**');
+      if (re.test(path)) {
+        return true;
+      }
+    },
     depth: 3, 
     ignoreInitial: true, 
   }).on('all', function(event, path) {
