@@ -1,7 +1,7 @@
 var daemon = require('daemonize2').setup({
   main: 'notify.js',
-  name: 'notify',
-  pidfile: 'notify.pid'
+  name: 'mynotify',
+  pidfile: 'mynotify.pid'
 });
 
 switch (process.argv[2]) {
