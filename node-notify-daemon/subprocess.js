@@ -14,14 +14,14 @@ setInterval(cb, 1000);
 // })
 // process.stdin.setEncoding('utf8');
 
-// process.stdin.on('readable', function() {
-//   console.log('receiving data');
-//   var chunk = process.stdin.read();
-//   if (chunk !== null) {
-//     process.stdout.write('data: ' + chunk);
-//   }
-// });
+process.stdin.on('readable', function() {
+  console.log('receiving data');
+  var chunk = process.stdin.read();
+  if (chunk !== null) {
+    process.stdout.write('data: ' + chunk);
+  }
+});
 
-// process.stdin.on('end', function() {
-//   process.stdout.write('end');
-// });
+process.stdin.on('end', function() {
+  process.stdout.write('end');
+});
