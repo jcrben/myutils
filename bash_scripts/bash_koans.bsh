@@ -1,0 +1,17 @@
+
+# foo="some,string,with,words"
+# bar=(${(s:,:)foo})
+# echo "$bar"
+
+# foo=''
+
+# if [${:-}]
+
+echo "hi my name is $((3+5))"
+
+#!/usr/bin/env bash
+for file in ./*; do
+  if ls "$file" | grep -q apps; then
+    echo "$file"
+  fi
+done

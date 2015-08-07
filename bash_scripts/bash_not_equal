@@ -1,0 +1,9 @@
+# I was not able to get this to work
+# also using multiline mode ran into http://unix.stackexchange.com/questions/44594/emacs-paste-text-from-clipboard-without-formatting
+for file in ./*; do
+  case $file in
+      [^"fiveproblems.js"])
+        rm $file
+        ;;
+  esac
+done
